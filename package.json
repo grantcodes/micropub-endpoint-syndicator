@@ -1,6 +1,6 @@
 {
   "name": "@micropub-endpoint/syndicator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "The base syndication plugin",
   "main": "build/index.js",
   "scripts": {
@@ -8,6 +8,7 @@
     "prepare": "babel index.js -d build"
   },
   "dependencies": {
+    "@babel/polyfill": "^7.0.0",
     "@micropub-endpoint/core": "^1.1.0"
   },
   "homepage": "https://github.com/grantcodes/micropub-endpoint-syndicator",
@@ -22,7 +23,6 @@
   "devDependencies": {
     "@babel/cli": "^7.1.2",
     "@babel/core": "^7.1.2",
-    "@babel/polyfill": "^7.0.0",
     "@babel/preset-env": "^7.1.0"
   }
 }
