@@ -10,7 +10,9 @@
   "dependencies": {
     "@micropub-endpoint/core": "^1.1.0"
   },
-  "author": "grant.codes",
+  "homepage": "https://github.com/grantcodes/micropub-endpoint-syndicator",
+  "bugs": "https://github.com/grantcodes/micropub-endpoint-syndicator/issues",
+  "author": "Grant Richmond <mail@grant.codes> (https://grant.codes)",
   "license": "ISC",
   "prettier": {
     "semi": false,
