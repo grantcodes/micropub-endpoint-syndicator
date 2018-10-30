@@ -1,14 +1,12 @@
 {
   "name": "@micropub-endpoint/syndicator",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "The base syndication plugin",
-  "main": "build/index.js",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "prepare": "babel index.js -d build"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.0.0",
     "@micropub-endpoint/core": "^1.1.0"
   },
   "homepage": "https://github.com/grantcodes/micropub-endpoint-syndicator",
@@ -19,10 +17,5 @@
     "semi": false,
     "trailingComma": "es5",
     "singleQuote": true
-  },
-  "devDependencies": {
-    "@babel/cli": "^7.1.2",
-    "@babel/core": "^7.1.2",
-    "@babel/preset-env": "^7.1.0"
   }
 }

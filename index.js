@@ -1,4 +1,3 @@
-require('@babel/polyfill')
 const { get: getCollection } = require('@micropub-endpoint/core/lib/db')
 const generateSearch = require('@micropub-endpoint/core/lib/generate-search')
 
