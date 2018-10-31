@@ -1,6 +1,3 @@
-const { get: getCollection } = require('@micropub-endpoint/core/lib/db')
-const generateSearch = require('@micropub-endpoint/core/lib/generate-search')
-
 class Syndicator {
   constructor(options) {
     options = Object.assign(
@@ -11,17 +8,29 @@ class Syndicator {
     )
     this.isSyndicatorPlugin = true
     this.options = options
+    this.importCoreFunctionality = this.importCoreFunctionality.bind(this)
     this.requireOptions = this.requireOptions.bind(this)
     this.checkShouldSyndicate = this.checkShouldSyndicate.bind(this)
     this.checkShouldSyndicateUpdate = this.checkShouldSyndicateUpdate.bind(this)
     this.deleteSyndication = this.deleteSyndication.bind(this)
     this.syndicate = this.syndicate.bind(this)
-    this.getCollection = getCollection
-    this.generateSearch = generateSearch
 
     this.requireOptions(['id', 'name'])
   }
 
+  /**
+   * Map core functionality to syndicator class
+   * @param {object} core Micropub core object, uses getCollection and generateSearch properties
+   */
+  importCoreFunctionality({ getCollection, generateSearch }) {
+    this.getCollection = getCollection
+    this.generateSearch = generateSearch
+  }
+
+  /**
+   * Throw error if missing option
+   * @param {array} keys Array of required option keys
+   */
   requireOptions(keys) {
     keys.forEach(key => {
       if (!this.options.hasOwnProperty(key)) {
